@@ -1,0 +1,207 @@
+.\" Automatically generated from an mdoc input file.  Do not edit.
+.\" DATE
+.TH "kew" "1" "9/3/23" "Linux" "General Commands Manual"
+.nh
+.if n .ad l
+.SH "NAME"
+\fBkew\fR
+,
+\fBkew music command\fR
+\- A terminal music player.
+.SH "SYNOPSIS"
+.HP 4n
+\fBkew\fR
+[OPTIONS]
+[\fIPARTIAL\ FILE\ OR\ DIRECTORY\ NAME\fR]
+.SH "DESCRIPTION"
+\fBkew\fR
+plays audio from your music folder when given a partial (or whole) file or directory name.
+A playlist is created when finding more than one file.
+It supports gapless playback, 24-bit/192khz audio and MPRIS.
+.PP
+Typical use:
+.PP
+\fBkew\fR
+artist, album or song name
+.PP
+\fBkew\fR
+returns results from the location of the first match, it doesn't return every result possible.
+.SH "OPTIONS"
+.TP 9n
+\fB\-h,\fR \fB\--help\fR
+Displays help.
+.TP 9n
+\fB\-v,\fR \fB\--version\fR
+Displays version info.
+.TP 9n
+\fB path <path>,\fR
+Sets the path to the music library.
+.TP 9n
+\fB\--nocover\fR
+Hides the cover.
+.TP 9n
+\fB\--noui\fR
+Completely hides the UI.
+.TP 9n
+\fB\-q,\fR \fB\--quitonstop\fR
+Exits after playing the whole playlist.
+.TP 9n
+\fB\-e,\fR \fB\--exact,
+Specifies you want an exact (but not case sensitive) match, of for instance an album.
+.TP 9n
+shuffle
+Shuffles the playlist before starting to play it.
+.TP 9n
+dir
+Plays the directory not the song.
+.TP 9n
+song
+Plays the song not the directory.
+.TP 9n
+list
+Searches for a (.m3u) playlist. These are normally not included in searches.
+.SH "EXAMPLES"
+.TP 9n
+kew
+Start
+\fBkew\fR
+in library view.
+.TP 9n
+kew all
+Start
+\fBkew\fR
+with all songs loaded into a playlist.
+.TP 9n
+kew albums
+Start
+\fBkew\fR
+with all albums randomly added one after the other in the playlist.
+.TP 9n
+kew moonlight son
+Play moonlight sonata.
+.TP 9n
+kew moon
+.br
+Play moonlight sonata.
+.TP 9n
+kew nirv
+.br
+Play all music under Nirvana folder shuffled.
+.TP 9n
+kew neverm
+Play Nevermind album in alphabetical order.
+.TP 9n
+kew shuffle neverm
+Play Nevermind album shuffled.
+.TP 9n
+kew list mix
+Play the mix.m3u playlist.
+.TP 9n
+kew <words A>:<words B>:<words C>
+Play the first match (whole directory or file) found under A, B, and C, shuffled. Searches are separated by a colon ':' character.
+.TP 9n
+kew .
+Play the "kew favorites.m3u" playlist.
+.SH "KEY BINDINGS"
+.TP 9n
++, -
+Adjusts volume.
+.TP 9n
+Left-right arrows/h,l
+Change song.
+.TP 9n
+Space
+Play, Pause.
+.TP 9n
+Shift+s
+Stop.
+.TP 9n
+F2 or Shift+z
+Show playlist view.
+.TP 9n
+F3 or Shift+x
+Show library view.
+.TP 9n
+F4 or Shift+c
+Show track view.
+.TP 9n
+F5 or Shift+v
+Show search view.
+.TP 9n
+F6 or Shift+b
+Show radio search view.
+.TP 9n
+F7 or Shift+n
+Show key bindings view.
+.TP 9n
+u
+Update the library.
+.TP 9n
+i
+Toggle colors derived from album cover or from color theme.
+.TP 9n
+v
+Toggle spectrum visualizer.
+.TP 9n
+b
+Switch between ascii and image album cover.
+.TP 9n
+r
+Repeat current song after playing.
+.TP 9n
+s
+Shuffles the playlist.
+.TP 9n
+a
+Seek Backward.
+.TP 9n
+d
+Seek Forward.
+.TP 9n
+x
+Save currently loaded playlist to a .m3u file in the music folder.
+.TP 9n
+"."
+Add currently playing song to "kew favorites.m3u" playlist. Play this list with "kew .".
+.TP 9n
+Tab
+Switch to next view.
+.TP 9n
+Shift+Tab
+Switch to previous view.
+.TP 9n
+Backspace
+Clear the playlist.
+.TP 9n
+Delete
+Remove a single playlist entry.
+.TP 9n
+t,g
+Move a song up or down the playlist.
+.TP 9n
+number + G or Enter
+Go to specific song number in the playlist.
+.TP 9n
+Esc or q
+Quit
+\fBkew\fR.
+.SH "FILES"
+.TP 10n
+\fI~/<configfolder>/kew/kewrc\fR
+Config file.
+.TP 10n
+\fI~/<configfolder>/kew/kewlibrary\fR
+Music library directory tree cache.
+.TP 10n
+\fI/<musicfolder>/kew.m3u\fR
+The
+\fBkew\fR
+playlist. Add to it by pressing '.' during playback of any song. This playlist is saved before q exits.
+.SH "COPYRIGHT"
+Copyright \[u00A9] 2023 Ravachol. License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH "SEE ALSO"
+Project home page:
+.TP 10n
+\fI<https://github.com/ravachol/kew>.\fR
